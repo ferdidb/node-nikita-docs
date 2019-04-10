@@ -392,7 +392,7 @@ To extract and compile Redis, we will write a shell script which will only be ex
 ```js
 require('nikita')
 .system.execute({
-  unless_exists: 'redis-stable/src/redis-server'
+  unless_exists: 'redis-stable/src/redis-server',
   cmd: `
   tar xzf cache/redis-stable.tar.gz
   cd redis-stable
@@ -437,7 +437,7 @@ require('nikita')
 // Call any action
 .file.properties({
   // The CLI message
-  header: 'Redis configuration'
+  header: 'Redis configuration',
   target: 'conf/redis.conf',
   separator: ' ',
   content: {
@@ -465,7 +465,7 @@ require('nikita')
 })
 ```
 
-Under the hood, both the `nikita.log.cli` and the `nikita.log.md` actions leverage the native Node.js [event API](https://Node.js.org/api/events.html). You can get more detailed information by visiting the [Logging and Debugging](/usages/logging_debugging/) documentation.
+Under the hood, both the `nikita.log.cli` and the `nikita.log.md` actions leverage the native Node.js [event API](https://Nodejs.org/api/events.html). You can get more detailed information by visiting the [Logging and Debugging](/usages/logging_debugging/) documentation.
 
 ### Get the server up and running
 
